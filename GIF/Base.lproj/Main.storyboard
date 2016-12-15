@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QiY-PT-y70">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="g28-vJ-Xdk">
+            <objects>
+                <viewController id="QiY-PT-y70" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u9C-sK-pfB"/>
+                        <viewControllerLayoutGuide type="bottom" id="fE2-LV-VaQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VYM-NS-284">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dK-Fh-pLl">
+                                <color key="backgroundColor" red="0.80144452249999998" green="0.77832310999999998" blue="0.82289693809999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="YTt-T3-6PR"/>
+                                </constraints>
+                                <state key="normal" title="选择照片">
+                                    <color key="titleColor" red="0.16538261830000001" green="0.39783052349999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="choosePicture:" destination="QiY-PT-y70" eventType="touchUpInside" id="b3T-f9-nDS"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wLz-FC-Ers">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rfL-3t-bFb">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QiY-PT-y70" id="0Sk-AN-UbC"/>
+                                    <outlet property="delegate" destination="QiY-PT-y70" id="bwK-YQ-fth"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGc-3H-2s4">
+                                <color key="backgroundColor" red="0.15986850529999999" green="1" blue="0.31762364520000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Kj6-vO-RLx"/>
+                                </constraints>
+                                <state key="normal" title="生成Gif">
+                                    <color key="titleColor" red="0.173301969" green="0.30564305739999997" blue="0.26229291630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createGif:" destination="QiY-PT-y70" eventType="touchUpInside" id="yL1-MD-GXb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcP-Qp-yGL">
+                                <color key="backgroundColor" red="1" green="0.52479137379999996" blue="0.405970579" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mou-aR-Nip"/>
+                                </constraints>
+                                <state key="normal" title="保存到相册">
+                                    <color key="titleColor" red="0.173301969" green="0.30564305739999997" blue="0.26229291630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createGif:" destination="QiY-PT-y70" eventType="touchUpInside" id="Bys-pv-BTg"/>
+                                    <action selector="savePotot:" destination="QiY-PT-y70" eventType="touchUpInside" id="6IQ-4H-7dw"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ae-qr-o3Y" customClass="XPQGifView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="abi-wp-XsL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wLz-FC-Ers" firstAttribute="leading" secondItem="VYM-NS-284" secondAttribute="leading" constant="20" id="12c-iO-Nk4"/>
+                            <constraint firstAttribute="bottom" secondItem="wLz-FC-Ers" secondAttribute="bottom" constant="290" id="1i5-tg-j3z"/>
+                            <constraint firstAttribute="trailing" secondItem="pGc-3H-2s4" secondAttribute="trailing" constant="30" id="5gN-rM-jk9"/>
+                            <constraint firstItem="wLz-FC-Ers" firstAttribute="top" secondItem="u9C-sK-pfB" secondAttribute="bottom" constant="20" id="BNB-jb-3dM"/>
+                            <constraint firstItem="jcP-Qp-yGL" firstAttribute="leading" secondItem="pGc-3H-2s4" secondAttribute="leading" id="D3N-E6-hEF"/>
+                            <constraint firstItem="pGc-3H-2s4" firstAttribute="width" secondItem="0dK-Fh-pLl" secondAttribute="width" id="D84-Mb-XUF"/>
+                            <constraint firstItem="0dK-Fh-pLl" firstAttribute="top" secondItem="wLz-FC-Ers" secondAttribute="bottom" constant="20" id="HKw-E9-oHw"/>
+                            <constraint firstItem="pGc-3H-2s4" firstAttribute="top" secondItem="wLz-FC-Ers" secondAttribute="bottom" constant="20" id="K7q-3B-5ac"/>
+                            <constraint firstItem="5Ae-qr-o3Y" firstAttribute="top" secondItem="jcP-Qp-yGL" secondAttribute="bottom" constant="20" id="KME-QB-hk5"/>
+                            <constraint firstItem="5Ae-qr-o3Y" firstAttribute="centerX" secondItem="VYM-NS-284" secondAttribute="centerX" id="lWd-1W-l87"/>
+                            <constraint firstItem="jcP-Qp-yGL" firstAttribute="top" secondItem="pGc-3H-2s4" secondAttribute="bottom" constant="20" id="nZ9-0W-zYr"/>
+                            <constraint firstAttribute="trailing" secondItem="wLz-FC-Ers" secondAttribute="trailing" constant="20" id="nwN-tY-cPM"/>
+                            <constraint firstItem="0dK-Fh-pLl" firstAttribute="leading" secondItem="VYM-NS-284" secondAttribute="leading" constant="30" id="oKi-ia-hLd"/>
+                            <constraint firstItem="fE2-LV-VaQ" firstAttribute="top" secondItem="5Ae-qr-o3Y" secondAttribute="bottom" constant="20" id="qJW-HL-q2I"/>
+                            <constraint firstItem="pGc-3H-2s4" firstAttribute="leading" secondItem="0dK-Fh-pLl" secondAttribute="trailing" constant="20" id="s2I-D6-sZR"/>
+                            <constraint firstItem="jcP-Qp-yGL" firstAttribute="width" secondItem="pGc-3H-2s4" secondAttribute="width" id="tFG-gu-V4f"/>
+                            <constraint firstItem="jcP-Qp-yGL" firstAttribute="height" secondItem="pGc-3H-2s4" secondAttribute="height" id="xQT-wM-HEL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="choosePicture" destination="0dK-Fh-pLl" id="Ihb-ze-1LU"/>
+                        <outlet property="collection" destination="wLz-FC-Ers" id="mYh-7K-whR"/>
+                        <outlet property="createGif" destination="pGc-3H-2s4" id="oWv-0j-rwf"/>
+                        <outlet property="gifView" destination="5Ae-qr-o3Y" id="U6M-tT-Q9v"/>
+                        <outlet property="gifView_height" destination="abi-wp-XsL" id="QjX-cs-6O0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WaV-bd-tf9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="-36"/>
+        </scene>
+    </scenes>
+</document>
